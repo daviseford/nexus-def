@@ -18,7 +18,7 @@ function nexus_breadcrumb($variables) {
     // Use CSS to hide titile .element-invisible.
     $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
     // comment below line to hide current page to breadcrumb
-$breadcrumb[] = drupal_get_title();
+    $breadcrumb[] = drupal_get_title();
     $output .= '<nav class="breadcrumb">' . implode(' » ', $breadcrumb) . '</nav>';
     return $output;
   }
@@ -110,8 +110,9 @@ function nexus_page_alter($page) {
 
 /**
  * Add javascript files for front-page jquery slideshow.
- */
+ *
 if (drupal_is_front_page()) {
   drupal_add_js(drupal_get_path('theme', 'nexus') . '/js/jquery.flexslider.js');
   drupal_add_js(drupal_get_path('theme', 'nexus') . '/js/slide.js');
 }
+*/
